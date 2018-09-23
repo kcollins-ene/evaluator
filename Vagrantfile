@@ -29,7 +29,8 @@ echo "Setting up 'ignition' database with 'ignition' user and password 'ignition
 mysql -u root --password=ignitionsql -e "CREATE USER 'ignition'@'localhost' IDENTIFIED BY 'ignition'; CREATE DATABASE ignition; GRANT ALL PRIVILEGES ON ignition.* to 'ignition'@'localhost';" >> install.log
 # Download Ignition and install
 echo "Downloading Ignition 7.9.3"
-wget -q https://s3.amazonaws.com/files.inductiveautomation.com/release/ia/build7.9.3/20170602-1004/Ignition-7.9.3-linux-x64-installer.run >> install.log
+wget -q --referer https://inductiveautomation.com/* https://s3.amazonaws.com/files.inductiveautomation.com/release/ia/build7.9.3/20170602-1004/Ignition-7.9.3-linux-x64-installer.run 
+>> install.log
 chmod a+x Ignition-7.9.3-linux-x64-installer.run
 echo "Installing Ignition 7.9.3"
 sudo ./Ignition-7.9.3-linux-x64-installer.run --unattendedmodeui none --mode unattended --prefix /usr/local/share/ignition >> install.log
