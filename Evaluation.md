@@ -1,6 +1,6 @@
 # Evaluation Instructions
 
-Once you have your development environment setup and you can access the Ignition Gateway Webpage, you're ready to create your demo project and complete the evaluation!  Take a peek at the **Hints** section below and don't forget to check the [Issues](https://github.com/kcollins-ene/evaluator/issues) section (and feel free to post there if needed) as well.
+Once you have your development environment setup and you can access the Ignition Gateway Webpage, you're ready to create your demo project and complete the evaluation!  Take a peek at the **[Hints](#Hints)** section below and don't forget to check the [Issues](https://github.com/kcollins-ene/evaluator/issues) section (and feel free to post there if needed) as well.
 
 To get started, here are a few key terms:
 
@@ -14,8 +14,6 @@ To get started, here are a few key terms:
 | Project             | One or more projects can exist on an Ignition Gateway server |
 | Client              | Web-Launched Client for a given Ignition Project |
 
-
-
 ## Setting up Device and Database Connections
 
 Before we actually dive into the creation of a GUI application, we'll get some preliminary items setup.
@@ -27,14 +25,14 @@ The *Gateway Status Page* should now reflect the new database connection and sim
 
 ![Database and Devices Created](images/database_and_devices_created.png)
 
-
-
 ## Creating an Application
 
 Next, we're going to create a baseline application to house our visualization and tag definitions:
 
-1. Use the *Launch Designer* link on the *Gateway Web Page* to open the Designer.
+1. Go to the *Gateway Web Page* and select the *Home* section.  Scroll to the bottom and download the *Native Client Launcher* for your platform and use it to connect to your gateway instance and open the Designer.
+
 2. Create a project called `Evaluator` using one of the *Single-Tier* navigation templates that will provide us with menuing and navigation preconfigured.
+
 3. Adjust the project properties to utilize *Anchored* mode as the default component layout methodology.
 
 Lets setup some framework elements for our evaluation:
@@ -49,7 +47,6 @@ Lets setup some framework elements for our evaluation:
    > It should be placed in between the `Overview` and `User Management` tabs.
 
 4. Save and close the `Navigation` window.
-
 
 We need some tags in order to drive our displays, so lets create some:
 
@@ -101,8 +98,6 @@ Now that we have some data, lets get started with our `Demo` window:
 
 Once complete, you should have a window that will allow viewing some of the simulated values as well as the snapshot values (which should change when you click the snapshot button you created).
 
-
-
 ## Hints
 
 Here are a few helpful Ignition-related hints to help you get started:
@@ -110,8 +105,7 @@ Here are a few helpful Ignition-related hints to help you get started:
 * Within the *Property Editor*, by default, you can only see *Basic* properties.  Utilize the *Filter properties* selector to expand your view to *All* properties to reveal all possible configuration options.
 * You can drag tags from the *Tag Browser* to the chart components to add tags as an easier method to finding them from within the customizer.
 * You can drag container components around on your window if you hold down the *Alt* key while dragging.
-
-
+* Keep in mind that there is a 2-hour trial that can be reset easily from the Gateway webpage.  If you find that your history values are not being captured in the Ignition Designer, this is probably the reason.
 
 ## Submitting your Project
 

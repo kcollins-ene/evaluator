@@ -4,13 +4,11 @@ This provides a simple set of exercises under the [Ignition](http://www.inductiv
 ## Prerequisites
 
 * VirtualBox
-  * **WARNING**: VirtualBox 5.1.16 has a known regression that breaks mounting of Shared Folders from Vagrant and will cause the provisioning to fail.  Version 5.1.18 fixes this issue.
 * Vagrant
-  * **WARNING**: Possible issue with Vagrant 1.9.4 (see issue [#4](https://github.com/kcollins-ene/evaluator/issues/4) and related links here for details), recommend 
-    installing at least Vagrant 1.9.5, where this issue is resolved.
-* Java SE 6, 7, or 8 Runtime Environment (JRE)
 
 ## Getting Started
+
+You'll need to have a system with ideally 6GB of system RAM in order to spool up the evaluator.  If you don't have a system available with enough resources, touch base with your ENE representative.
 
 We're using [Vagrant](http://www.vagrantup.com) to handle the deployment of the environment.  Make sure that you have Vagrant installed by getting a download here:
 
@@ -19,10 +17,6 @@ https://www.vagrantup.com/downloads.html
 You also need to have VirtualBox installed as the VM provider.  Get VirtualBox here:
 
 https://www.virtualbox.org/wiki/Downloads
-
-For the Java Runtime Environment, it is recommended you install Java 8 for your platform.  Get Java 8 JRE here:
-
-http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html
 
 ### Windows
 
@@ -35,8 +29,6 @@ First, download the repository to your computer (if you have `git` installed, yo
 Unpack the downloaded zip file, open a command prompt to the resulting location, and run `vagrant up`:
 
 ![Launching Vagrant](images/launching_vagrant.png)
-
-
 
 ### Linux / macOS
 
@@ -58,7 +50,7 @@ vagrant up
 
 ### All
 
-Following the platform-specific steps above will create and provision an Ubuntu 16.04 development environment with Oracle Java8, MySQL, and Ignition 7.9.3 preinstalled.  Next, simply launch a web browser against the forwarded port on your local computer:
+Following the platform-specific steps above will create and provision an Ubuntu 16.04 development environment with Oracle Java8, MySQL, and Ignition 7.9.3 preinstalled.  Next, simply launch a web browser against the forwarded port on your local computer (note that if for some reason there was a port collision, you might need to enter a port other than 8088 here, consult the output from `vagrant up`):
 
 http://localhost:8088
 
@@ -79,9 +71,6 @@ vagrant halt
 ```
 
 This will shutdown the virtual machine and release the network port configuration that was setup on launch.
-
-
-
 
 [^1]: VirtualBox 5.1.16 Regression: https://www.virtualbox.org/ticket/14651
 
