@@ -50,7 +50,7 @@ vagrant up
 
 ### All
 
-Following the platform-specific steps above will create and provision an Ubuntu 16.04 development environment with Oracle Java8, MySQL, and Ignition 7.9.3 preinstalled.  Next, simply launch a web browser against the forwarded port on your local computer (note that if for some reason there was a port collision, you might need to enter a port other than 8088 here, consult the output from `vagrant up`):
+Following the platform-specific steps above will create and provision an Ubuntu 16.04 development environment with Oracle Java8, MySQL, and Ignition 7.9.10 preinstalled.  Next, simply launch a web browser against the forwarded port on your local computer (note that if for some reason there was a port collision, you might need to enter a port other than 8088 here, consult the output from `vagrant up`):
 
 http://localhost:8088
 
