@@ -10,15 +10,11 @@ export DEBIAN_FRONTEND=noninteractive
 sudo sed -i 's/^mesg n/tty -s \\&\\& mesg n/g' /root/.profile
 sudo ex +"%s@DPkg@//DPkg" -cwq /etc/apt/apt.conf.d/70debconf
 sudo dpkg-reconfigure debconf -f noninteractive -p critical
-# Add Oracle Java Repository
-echo "Adding Oracle Java Repository"
-sudo add-apt-repository -y ppa:webupd8team/java >> install.log 2>&1
+# Update Package Cache
 sudo apt-get update >> install.log
-# Setup License Acceptance and install Java8
-echo "Installing Oracle Java8"
-echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
-echo debconf shared/accepted-oracle-license-v1-1 seen true | sudo debconf-set-selections
-sudo apt-get install -y -q oracle-java8-installer >> install.log
+# Install OpenJDK Java 8
+echo "Installing OpenJDK Java 8"
+sudo apt-get install -y -q openjdk-8-jre-headless >> install.log
 # Setup MySQL Setup and install mysql-server
 echo "Installing MySQL"
 echo "mysql-server mysql-server/root_password select ignitionsql" | sudo debconf-set-selections
