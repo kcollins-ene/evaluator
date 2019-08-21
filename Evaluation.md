@@ -90,7 +90,7 @@ Now that we have some data, lets get started with our `Demo` window:
 
    > Once you configure the button for the *Set Tag Value* action, take a look at the *Script Editor* tab to see what it created.  You might see if you can leverage the `system.tag.read()` function to read the value directly from the tag instead of from a property.
 
-9. Work with the layout features of the components you've created to make this window function properly on any size screen (prioritize giving the most real estate to the trend).  Consult the the documentation here for more information on layout: [Component Layout](https://docs.inductiveautomation.com:8443/display/DOC79/Working+with+Components#WorkingwithComponents-ComponentLayout)
+9. Work with the layout features of the components you've created to make this window function properly on any size screen (prioritize giving the most real estate to the trend).  Consult the the documentation here for more information on layout: [Component Layout](https://docs.inductiveautomation.com/display/DOC79)
 
 10. Save and close your `Demo` window.  
 
